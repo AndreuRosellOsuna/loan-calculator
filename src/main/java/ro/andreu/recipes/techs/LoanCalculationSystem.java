@@ -55,7 +55,7 @@ public class LoanCalculationSystem implements CommandLineRunner {
         try {
             lenders = csvImporter.getLendersFromFile(marketFileCommandArgument);
         } catch (FileNotFoundException e) {
-            logger.error("The market file ile {} is not found", marketFileCommandArgument);
+            logger.error("The market file {} is not found", marketFileCommandArgument);
             System.exit(1);
         }
 
