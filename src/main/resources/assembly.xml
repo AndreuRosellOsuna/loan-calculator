@@ -12,6 +12,8 @@
             <directory>${project.build.directory}</directory>
             <includes>
                 <include>${artifactId}-${version}.jar</include>
+                <include>${artifactId}-${version}-javadoc.jar</include>
+                <include>${artifactId}-${version}-sources.jar</include>
                 <include>launcher.bat</include>
                 <include>launcher.sh</include>
             </includes>
