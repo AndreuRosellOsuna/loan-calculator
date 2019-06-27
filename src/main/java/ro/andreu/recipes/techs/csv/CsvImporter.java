@@ -15,9 +15,18 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+/**
+ * Class providing the service to collect data from a csv file
+ */
 @Component
 public class CsvImporter {
 
+    /**
+     * Method used to collect data from a csv file
+     * @param marketFile the name of the market file
+     * @return the data from the file
+     * @throws FileNotFoundException
+     */
     public List<Lender> getLendersFromFile(String marketFile) throws FileNotFoundException {
         return new CsvToBeanBuilder(new FileReader(marketFile))
                 .withType(Lender.class).build().parse();

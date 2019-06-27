@@ -8,11 +8,18 @@ import ro.andreu.recipes.techs.model.Lender;
 import java.text.NumberFormat;
 import java.util.List;
 
+/**
+ * Class providing some bussiness and tech validations
+ */
 @Service
 public class ValidationService {
 
     Logger logger = LoggerFactory.getLogger("LCS_CONSOLE");
 
+    /**
+     * Check the arguments passed from the command line
+     * @param args
+     */
     public void validateArguments(String[] args) {
         // Check existance of 2 arguments
         if(!checkPresenceArguments(args)) {

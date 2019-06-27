@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+/**
+ * Class providing methods to do bussiness calculations
+ */
 @Service
 public class QuoteService {
 
@@ -14,6 +17,12 @@ public class QuoteService {
 
     private final int NUMBER_OF_QUOTES = 36;
 
+    /**
+     * From a loan amount and a calculated rate, it provide the final monthly repayment
+     * @param loanAmountFloatParam  the total desired loan amount
+     * @param rateFloatParam the anual rate of interests
+     * @return the monthly repayment
+     */
     public BigDecimal calculateQuote(Float loanAmountFloatParam, Float rateFloatParam) {
         BigDecimal quote = null;
 
@@ -46,6 +55,11 @@ public class QuoteService {
         return quote;
     }
 
+    /**
+     * From a monthly quote, it calculate the total repayment
+     * @param quote the monthly repayment
+     * @return the total repayment
+     */
     public BigDecimal calculateTotalRepayment(BigDecimal quote) {
         return quote.multiply(new BigDecimal(NUMBER_OF_QUOTES)).setScale(mathContexts.getRepaymentScale(), mathContexts.getRepaymentRoundingMode());
     }

@@ -2,6 +2,9 @@ package ro.andreu.recipes.techs.model;
 
 import com.opencsv.bean.CsvBindByName;
 
+/**
+ * POJO representing the data from the csv
+ */
 public class Lender implements Comparable<Lender> {
 
     @CsvBindByName(column = "Lender")

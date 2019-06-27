@@ -17,6 +17,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
 
+/**
+ * Application that allows to the user do an offer to the costumer based on a lender based represented on a csv file
+ */
 @SpringBootApplication
 public class LoanCalculationSystem implements CommandLineRunner {
 

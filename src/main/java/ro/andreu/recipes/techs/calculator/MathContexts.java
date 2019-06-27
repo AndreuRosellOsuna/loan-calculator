@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
+/**
+ * Some constants to work with {@link java.math.BigDecimal}
+ */
 @Component
 public class MathContexts {
 
